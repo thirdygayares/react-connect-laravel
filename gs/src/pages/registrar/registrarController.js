@@ -22,6 +22,7 @@ const RegController = () =>{
               <AddStudents/>
             </Route>
 
+
           </Switch>
         </div>
       </Router>
