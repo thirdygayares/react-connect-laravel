@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from './inc/navbar';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 class AddStudents extends Component {
@@ -21,8 +22,24 @@ class AddStudents extends Component {
             });
         }
 
-        enrollStudents = (e) => {
+        enrollStudents = async (e) => {
             e.preventDefault();
+
+            const res = await axios.post('http://127.0.0.1:8000/api/enroll-students', this.state);
+
+            if(res.data.status === 200){
+                console.log(res.data.message);
+
+                this.setState ({
+                    lastname: '', 
+                    firstname: '', 
+                    college: '',
+                    course: '',
+                    section: '', 
+                    mobilenumber: '', 
+                    email: '', 
+                });
+            }
         }
 
 
@@ -43,51 +60,51 @@ class AddStudents extends Component {
                         </div>
 
                         <div className="card-body">
-                            <form onSubmit="this.enrollStudents" >
+                            <form onSubmit={this.enrollStudents} >
                            
                          {/* 
                                 <div className="form-group mb-3">
-                                    <label for=""> Image (File Upload)</label>
+                                    <label > Image (File Upload)</label>
                                     <input type="file" name="image"className="form-control" required/>
                                 </div>
 
                                 */}
 
                                 <div className="form-group mb-3">
-                                    <label for="">last Name</label>
-                                    <input type="text" name="lastname" onChange={this.handleInput}   value={this.state.lastname}  className="form-control" required/>
+                                    <label >last Name</label>
+                                    <input type="text" name="lastname" onChange={this.handleInput}   value={this.state.lastname}  className="form-control" />
                                 </div>
 
                                 <div className="form-group mb-3">
-                                    <label for="">First Name</label>
-                                    <input type="text" name="firstname" onChange={this.handleInput}  value={this.state.firstname}  className="form-control" required/>
+                                    <label >First Name</label>
+                                    <input type="text" name="firstname" onChange={this.handleInput}  value={this.state.firstname}  className="form-control" />
                                 </div>
                                                                                         
                                 <div className="form-group mb-3">
-                                    <label for="">College</label>
-                                    <input type="text" name="college" onChange={this.handleInput} value={this.state.college} className="form-control" require/>
+                                    <label >College</label>
+                                    <input type="text" name="college" onChange={this.handleInput} value={this.state.college} className="form-control" />
                                 </div>
 
                                 <div className="form-group mb-3">
-                                    <label for="">Course</label>
-                                    <input type="text" name="course" onChange={this.handleInput}  value={this.state.course}  className="form-control" require/>
+                                    <label >Course</label>
+                                    <input type="text" name="course" onChange={this.handleInput}  value={this.state.course}  className="form-control" />
                                 </div>
 
                                 
                                 <div className="form-group mb-3">
-                                    <label for="">Section</label>
-                                    <input type="text" name="section" onChange={this.handleInput}  value={this.state.section}  className="form-control" require/>
+                                    <label >Section</label>
+                                    <input type="text" name="section" onChange={this.handleInput}  value={this.state.section}  className="form-control" />
                                 </div>
 
 
                                 <div className="form-group mb-3">
-                                    <label for="">Mobile Number</label>
-                                    <input type="text" name="mobilenumber" onChange={this.handleInput}  value={this.state.mobilenumber}  className="form-control" required/>
+                                    <label >Mobile Number</label>
+                                    <input type="text" name="mobilenumber" onChange={this.handleInput}  value={this.state.mobilenumber}  className="form-control" />
                                 </div>
 
                                 <div className="form-group mb-3">
-                                    <label for="">Email</label>
-                                    <input type="email" name="email" onChange={this.handleInput}  value={this.state.email}  className="form-control" required/>
+                                    <label >Email</label>
+                                    <input type="email" name="email" onChange={this.handleInput}  value={this.state.email}  className="form-control" />
                                 </div>
 
 
