@@ -1,9 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Navbar from './inc/navbar';
 import {Link} from 'react-router-dom';
 
 
-const AddStudents = () => {
+class AddStudents extends Component {
+
+        state = {
+            lastname: '', 
+            firstname: '', 
+            college: '',
+            course: '',
+            section: '', 
+            mobilenumber: '', 
+            email: '', 
+        }
+
+        handleInput = (e) => {
+            this.setState({
+                [e.target.name]: e.target.value
+            });
+        }
+
+        enrollStudents = (e) => {
+            e.preventDefault();
+        }
+
+
+        
+    render(){
     return(
         <div>
         <Navbar/>
@@ -14,51 +38,61 @@ const AddStudents = () => {
                     <div className="card">
                         <div className="card-header">
                             <h4>Enroll Students
-                                <Link to="/" className="btn btn-danger float-end">BACK</Link>
+                                <Link to={"/"} className="btn btn-danger float-end">BACK</Link>
                             </h4>
                         </div>
 
                         <div className="card-body">
-                            <form action="#" method="POST" >
-                         
+                            <form onSubmit="this.enrollStudents" >
+                           
+                         {/* 
                                 <div className="form-group mb-3">
                                     <label for=""> Image (File Upload)</label>
                                     <input type="file" name="image"className="form-control" required/>
                                 </div>
 
+                                */}
+
+                                <div className="form-group mb-3">
+                                    <label for="">last Name</label>
+                                    <input type="text" name="lastname" onChange={this.handleInput}   value={this.state.lastname}  className="form-control" required/>
+                                </div>
+
+                                <div className="form-group mb-3">
+                                    <label for="">First Name</label>
+                                    <input type="text" name="firstname" onChange={this.handleInput}  value={this.state.firstname}  className="form-control" required/>
+                                </div>
+                                                                                        
+                                <div className="form-group mb-3">
+                                    <label for="">College</label>
+                                    <input type="text" name="college" onChange={this.handleInput} value={this.state.college} className="form-control" require/>
+                                </div>
+
+                                <div className="form-group mb-3">
+                                    <label for="">Course</label>
+                                    <input type="text" name="course" onChange={this.handleInput}  value={this.state.course}  className="form-control" require/>
+                                </div>
+
                                 
                                 <div className="form-group mb-3">
-                                    <label for=""> Category</label>
-                                    <input type="text" name="category" className="form-control" require/>
+                                    <label for="">Section</label>
+                                    <input type="text" name="section" onChange={this.handleInput}  value={this.state.section}  className="form-control" require/>
                                 </div>
-
 
 
                                 <div className="form-group mb-3">
-                                    <label for=""> Name</label>
-                                    <input type="text" name="name" className="form-control" required/>
-                                </div>
-                              
-
-                                <div className="form-group mb-3">
-                                    <label for=""> Price</label>
-                                    <input type="text" name="price"  className="form-control" required/>
+                                    <label for="">Mobile Number</label>
+                                    <input type="text" name="mobilenumber" onChange={this.handleInput}  value={this.state.mobilenumber}  className="form-control" required/>
                                 </div>
 
                                 <div className="form-group mb-3">
-                                    <label for=""> Description</label>
-                                    <textarea type="text" name="description" className="form-control" rows="3"></textarea >
+                                    <label for="">Email</label>
+                                    <input type="email" name="email" onChange={this.handleInput}  value={this.state.email}  className="form-control" required/>
                                 </div>
 
-                                <div className="form-group mb-3">
-                                    <label for=""> Size</label>
-                                    <input type="text" name="size"  className="form-control" required/>
-                                </div>
 
-                                <div className="form-group mb-3">
-                                    <label for=""> Color</label>
-                                    <input type="text" name="color"  className="form-control" required/>
-                                </div>
+                                
+                                
 
 
                                 <div className="form-group mb-3">
@@ -82,6 +116,7 @@ const AddStudents = () => {
 
 
     );
+}
 }
 
 
