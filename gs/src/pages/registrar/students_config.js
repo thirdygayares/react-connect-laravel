@@ -62,7 +62,7 @@ class StudentsConfig extends Component {
         <div className="col-md-12 mt-4 text center" >
             <div className="card">
                 <div className="card-header">
-                    <h4>PRODUCTS INFORMATION
+                    <h4>STUDENTS INFORMATION
                         <Link className="btn btn-primary float-end"  to="/enroll">Enroll</Link>
                     </h4>
                 </div>
