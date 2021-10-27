@@ -22,10 +22,6 @@ const RegController = () =>{
               <AddStudents/>
             </Route>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f67fdeb218822e03bb1530a5985694d685e89770
           </Switch>
         </div>
       </Router>

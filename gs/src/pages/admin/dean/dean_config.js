@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-class AddTeacher extends Component {
+class DeanConfig extends Component {
 
     render() {
         return(
@@ -9,41 +9,15 @@ class AddTeacher extends Component {
 
                 <br/>
 
-                <nav className="navbar navbar-light bg-light">
-                <div className="container-fluid">
-                <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <Link className="navbar-brand">Filter</Link>
-            {/**First Filter */}
-                <div className="btn-group" role="group">
-                <button id="btnGroupDrop1" type ="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                College
-                </button>
-                <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><Link className="dropdown-item" href="#">list of College</Link></li>
-                <li><Link className="dropdown-item" href="#">list of College</Link></li>
-                </ul>
-                </div>
-
-
-            </div >
-
-            <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search Students" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
-                    </div >
-                </nav >
-
-
-
+          
             <div className="container-fluid">
                 <div className="col-md-12 mt-3 text center" >
                     <div className="card">
                         <div className="row">
                             <div className="card-header">
-                                <h4>Teachers INFORMATION (FOR JONNY pa ren)
+                                <h4>Dean INFORMATION (FOR JONNY pa ren)
 
-                                  <Link className="btn btn-primary float-end" to="/enroll">Add Teacher</Link> 
+                                  {/**<Link className="btn btn-primary float-end" to="/enroll">Enroll</Link> */}  
                                 </h4>
                             </div>
                             <div className="card-body">
@@ -83,4 +57,4 @@ class AddTeacher extends Component {
 
 }
 
-export default AddTeacher;
+export default DeanConfig;

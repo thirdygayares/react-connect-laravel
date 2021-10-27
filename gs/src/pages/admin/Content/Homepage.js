@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class About_us extends Component {
+class Homepage_Controller extends Component {
 
     render() {
         return (
@@ -14,7 +14,7 @@ class About_us extends Component {
                     <div className="card">
                         <div className="row">
                             <div className="card-header">
-                                <h4>Ikaw Bahala Dito Renan ABOUT CONFIGURATION
+                                <h4>Ikaw Bahala Dib Dito Renan ABOUT Homepage Configuration
 
                                     <Link className="btn btn-primary float-end" to="/enroll">Enroll</Link>
                                 </h4>
@@ -55,4 +55,4 @@ class About_us extends Component {
     }
 }
 
-export default About_us;
+export default Homepage_Controller;
