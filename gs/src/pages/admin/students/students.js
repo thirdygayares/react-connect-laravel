@@ -9,7 +9,8 @@ class Students extends Component {
 
             <div>
 
-                <br/>
+        <main class="page-content"> 
+        
 
                 <nav className="navbar navbar-light bg-light">
                 <div className="container-fluid">
@@ -66,7 +67,7 @@ class Students extends Component {
             <div className="container-fluid">
                 <div className="col-md-12 mt-3 text center" >
                     <div className="card">
-                        <div className="row">
+                       
                             <div className="card-header">
                                 <h4>STUDENTS INFORMATION (FOR JONNY)
 
@@ -100,9 +101,9 @@ class Students extends Component {
                     </div>
                 </div>
 
-            </div>
+   
 
-
+            </main>
             </div >
 
         );

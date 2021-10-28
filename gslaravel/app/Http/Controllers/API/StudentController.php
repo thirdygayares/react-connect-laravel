@@ -24,8 +24,6 @@ class StudentController extends Controller
             'status'=>200,
             'message'=>'Students Added Succesfully',
         ]);
-
-
     }
 
 
