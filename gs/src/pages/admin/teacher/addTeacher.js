@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Navbar from './inc/navbar';
+
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 
-class AddStudents extends Component {
+class AddTeacher extends Component {
 
         state = {
             lastname: '', 
@@ -24,11 +24,10 @@ class AddStudents extends Component {
         addTeachers = async (e) => {
             e.preventDefault();
 
-            const res = await axios.post('http://127.0.0.1:8000/api/add-teacher', this.state);
+            const res = await axios.post('/api/add-teacher', this.state);
 
             if(res.data.status === 200){
                 console.log(res.data.message);
-
                 this.setState ({
                     lastname: '', 
                     firstname: '', 
@@ -42,8 +41,10 @@ class AddStudents extends Component {
     
     render(){
     return(
+
         <div>
-        <Navbar/>
+   
+        <main class="page-content"> 
             
         <div className="container">
         <div className="row justify-content-center">
@@ -96,12 +97,9 @@ class AddStudents extends Component {
                                     <input type="email" name="email" onChange={this.handleInput}  value={this.state.email}  className="form-control" />
                                 </div>
 
-                            
-
-                              
-                                
+                                                                      
                                 <div className="form-group mb-3">
-                                    <button type="submit" className="btn btn-primary">Submit</button>
+                                 <button type="submit" className="btn btn-primary">Submit</button>
 
                                 </div>
                                                  
@@ -114,7 +112,8 @@ class AddStudents extends Component {
             </div>
         </div>
     </div>
-
+    
+    </main>
         </div>
 
 
@@ -123,4 +122,4 @@ class AddStudents extends Component {
 }
 
 
-export default AddStudents;
+export default AddTeacher;

@@ -44,7 +44,7 @@ class ViewTeacher extends Component {
                             <div className="card-header">
                                 <h4>Teachers INFORMATION (FOR JONNY pa ren)
 
-                                  <Link className="btn btn-primary float-end" to="/enroll">Add Teacher</Link> 
+                                  <Link className="btn btn-primary float-end" to="/add_teacher">Add Teacher</Link> 
                                 </h4>
                             </div>
                             <div className="card-body">
