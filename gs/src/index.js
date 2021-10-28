@@ -6,7 +6,18 @@ import reportWebVitals from './reportWebVitals';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'bootstrap/custom/sidebar.css';
+
+
+
+
+
+import './pages/assets/custom/ccs/style.css';
+
+
+
+
+
+
 
 
 ReactDOM.render(

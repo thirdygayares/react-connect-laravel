@@ -21,8 +21,7 @@ class AdminController extends Component{
                 <div>
                   
                     <Navbar_Homepage/>
-                    <main>
-                    <Sidebar/>
+                  
                         <Switch>
                             <Route path ="/About_us" component ={About_us}/>
                             <Route path ="/homepage_Controller" component ={Homepage_Controller}/>
@@ -30,14 +29,10 @@ class AdminController extends Component{
                             <Route path ="/teacher_config" component = {AddTeacher}/>
                             <Route path ="/dean_config" component = {DeanConfig}/>
                             <Route path ="/registar_config" component = {RegistrarConfig}/>
-                            <Route path ="/guardian_config" component = {GuardinConfig}/>
-
-                            
-                            
-
+                            <Route path ="/guardian_config" component = {GuardinConfig}/>                           
                         </Switch>
 
-                        </main>
+                        
                 </div>
          
             </Router>

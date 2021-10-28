@@ -1,6 +1,6 @@
 import './App.css';
 import RegController from './pages/registrar/registrarController';
-import AdminController from './pages/admin/AdminController';
+import AdminController from './pages/admin/adminController';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom' 
 
 function App() {
