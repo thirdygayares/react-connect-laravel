@@ -33,8 +33,7 @@ class AdminController extends Component{
                             <Route path ="/admin_config" component = {AdminAccount}/>                           
 
                         </Switch>
-
-                        
+                     
                 </div>
          
             </Router>
