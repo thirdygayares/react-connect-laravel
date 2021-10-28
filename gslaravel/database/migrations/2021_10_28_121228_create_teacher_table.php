@@ -15,18 +15,16 @@ class CreateTeacherTable extends Migration
     {
         Schema::create('teacher', function (Blueprint $table) {
             $table->id();
-       
             $table->string('lastname');
             $table->string('firstname');
-            $table->string('college');
             $table->string('gender');
+            $table->string('college');
             $table->string('mobilenumber');
             $table->string('email');
-     
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *

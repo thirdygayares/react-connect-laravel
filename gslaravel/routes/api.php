@@ -8,7 +8,8 @@ use App\Http\Controllers\API\TeacherController;
 Route::post('/enroll-students', [StudentController::class, 'store']);
 Route::get('/students', [StudentController::class, 'students']);
 
-Route::get('/add-teacher', [TeacherController::class, 'teacherStore']);
+Route::post('/addteacher', [TeacherController::class, 'teacherstore']);
+Route::get('/teacher', [TeacherController::class, 'teacher']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

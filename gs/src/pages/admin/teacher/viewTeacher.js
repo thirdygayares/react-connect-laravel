@@ -1,9 +1,55 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class ViewTeacher extends Component {
+    state = {
+        teacher: [],
+        loading: true,
+    }
 
+
+    async componentDidMount() {
+        const res = await axios.get('/api/teacher');
+        console.log(res);
+        if (res.data.status === 200) {
+            this.setState({
+                teacher: res.data.teacher,
+                loading: false,
+            });
+        }
+    }
     render() {
+
+        var Teacher_data = " ";
+
+        if (this.state.loading) {
+            Teacher_data = <tr>
+                <td colSpan="7">
+                    <h2>Loading</h2>
+                </td>
+            </tr>
+        } else {
+            Teacher_data =
+                this.state.teacher.map((item) => {
+                    return (
+                        <tr key={item.id}>
+                            <td >{item.id}</td>
+                            <td >{item.lastname}</td>
+                            <td >{item.college}</td>                   
+                            <td >{item.mobilenumber}</td>
+                            <td >{item.email}</td>
+                            <td > <Link className="btn btn-success" to={'edit-teacher/${item.id}'}> Edit </Link></td>
+                            <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> View </Link></td>
+                            <td > <Link className="btn btn-success" to={'delete-teacher/${item.id}'}> Delete </Link></td>
+                            <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}> Reset Password </Link></td>
+                        </tr>
+                    );
+                });
+
+        }
+
+
         return(
             <div>
 
@@ -66,7 +112,7 @@ class ViewTeacher extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        {Teacher_data}
                                     </tbody>
                                 </table>
                             </div>

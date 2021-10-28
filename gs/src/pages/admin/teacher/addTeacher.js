@@ -9,10 +9,10 @@ class AddTeacher extends Component {
         state = {
             lastname: '', 
             firstname: '', 
+            gender: '',  
             college: '',                  
             mobilenumber: '', 
-            email: '', 
-            gender: '', 
+            email: '',           
         }
 
         handleInput = (e) => {
@@ -22,37 +22,37 @@ class AddTeacher extends Component {
         }
 
         addTeachers = async (e) => {
-            e.preventDefault();
-
-            const res = await axios.post('/api/add-teacher', this.state);
+            e.preventDefault(); 
+                     
+            const res = await axios.post('/api/addteacher', this.state);  
 
             if(res.data.status === 200){
                 console.log(res.data.message);
+
                 this.setState ({
                     lastname: '', 
-                    firstname: '', 
+                    firstname: '',
+                    gender: '',   
                     college: '',                  
                     mobilenumber: '', 
                     email: '', 
-                    gender: '',  
                 });
+
             }
         }
-    
+
     render(){
     return(
-
         <div>
    
-        <main class="page-content"> 
-            
+        <main class="page-content">      
         <div className="container">
         <div className="row justify-content-center">
             <div className="col-md-6 mt-4">
                     <div className="card">
                         <div className="card-header">
                             <h4>Add Teacher
-                                <Link to={"/"} className="btn btn-danger float-end">BACK</Link>
+                                <Link to="/teacher_config" className="btn btn-danger float-end">BACK</Link>
                             </h4>
                         </div>
 
@@ -66,11 +66,16 @@ class AddTeacher extends Component {
                                 </div>
 
                                 */}
-
                                 <div className="form-group mb-3">
                                     <label >Last Name</label>
                                     <input type="text" name="lastname" onChange={this.handleInput}   value={this.state.lastname}  className="form-control" />
                                 </div>
+
+                                <div className="form-group mb-3">
+                                    <label >Gender</label>
+                                    <input type="text" name="gender" onChange={this.handleInput}  value={this.state.gender}  className="form-control" />
+                                </div>
+                                        
 
                                 <div className="form-group mb-3">
                                     <label >First Name</label>
@@ -82,11 +87,7 @@ class AddTeacher extends Component {
                                     <input type="text" name="college" onChange={this.handleInput} value={this.state.college} className="form-control" />
                                 </div>
 
-                                <div className="form-group mb-3">
-                                    <label >Gender</label>
-                                    <input type="email" name="gender" onChange={this.handleInput}  value={this.state.gender}  className="form-control" />
-                                </div>
-                                           
+                                 
                                 <div className="form-group mb-3">
                                     <label >Mobile Number</label>
                                     <input type="text" name="mobilenumber" onChange={this.handleInput}  value={this.state.mobilenumber}  className="form-control" />
@@ -101,9 +102,7 @@ class AddTeacher extends Component {
                                 <div className="form-group mb-3">
                                  <button type="submit" className="btn btn-primary">Submit</button>
 
-                                </div>
-                                                 
-
+                                </div>                                                
                             </form>
                         </div>
 

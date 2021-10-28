@@ -25,7 +25,7 @@ class AddStudents extends Component {
         enrollStudents = async (e) => {
             e.preventDefault();
 
-            const res = await axios.post('http://127.0.0.1:8000/api/enroll-students', this.state);
+            const res = await axios.post('/api/enroll-students', this.state);
 
             if(res.data.status === 200){
                 console.log(res.data.message);
