@@ -1,6 +1,9 @@
 import './App.css';
 import RegController from './pages/registrar/registrarController';
 import AdminController from './pages/admin/adminController';
+
+import HomePageController from './pages/Homepage/HomePageController';
+
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom' 
 import axios from 'axios';
 
@@ -10,20 +13,28 @@ axios.defaults.headers.post['Accept'] = 'application/json';
 
 function App() {
   return (
-    
-   <Router> 
+
+  
+    <Router>
+
     <div>
       <Switch>
 
-        <Route exact path ="/">
-        <RegController/>
-        </Route> 
-      
-        <Route> 
-          <AdminController/>    
-        </Route>
-      
-      
+     
+
+    
+      <Route exact path ="/">
+      <HomePageController/>
+      </Route>
+
+      <Route >
+      <AdminController/>
+      </Route>
+
+      <Route>
+      <RegController/>
+      </Route>
+  
       </Switch>
 
     </div>
