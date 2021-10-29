@@ -1,36 +1,56 @@
-import React, {Component} from 'react';
-import Navbar from './inc/navbar';
-import  AddTeacher from './teacher/addTeacher';
-import  ViewTeacher from './teacher/viewTeacher';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import React from "react";
+import { Component } from 'react';
+import Navbar from "./inc/navbar";
+import About_us from "./Content/About_us";
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-    class AdminController extends Component {
+import Homepage_Controller from "./Content/Homepage";
+import Students from "./students/students";
+import ViewTeacher from "./teacher/viewTeacher";
+import AddTeacher from "./teacher/addTeacher";
+import DeanConfig from "./dean/dean_config";
+import RegistrarConfig from "./registrar/registrar_config";
+import AddRegistrar from "./registrar/add_registrar";
+import GuardinConfig from "./guardian/guardian_config";
+import AddGuardian from "./guardian/addguardian";
+import AdminAccount from "./admin_account/admin_account";
+import AddAdmin from "./admin_account/create_admin";
 
-        render(){
-            return(
-                <Router>
-                <div>
-                <Navbar/>
+
+
+class AdminController extends Component{
+
+
+
+    render(){
+        return(
+            <Router>
               
-                <Switch>
-               
-                <Route exact path="/addTeacher" component ={AddTeacher}/>
-                
+                <div>
+                  
+                    <Navbar/>
+                  
+                        <Switch>
+                            <Route path ="/About_usCofig" component ={About_us}/>
+                            <Route path ="/homepage_Controller" component ={Homepage_Controller}/>
+                            <Route path ="/students_config" component = {Students}/>
+                            <Route path ="/teacher_config" component = {ViewTeacher}/>
+                            <Route path ="/dean_config" component = {DeanConfig}/>
+                            <Route path ="/registar_config" component = {RegistrarConfig}/>
+                            <Route path ="/add_registrar" component = {AddRegistrar}/>
+                            <Route path ="/guardian_config" component = {GuardinConfig}/> 
+                            <Route path ="/addguardian" component = {AddGuardian}/> 
+                            <Route path ="/admin_config" component = {AdminAccount}/>  
+                            <Route path ="/create_admin" component = {AddAdmin}/>       
+                            <Route path ="/add_teacher" component = {AddTeacher}/>                           
 
-                
-                <Route path="/viewTeacher" component ={ViewTeacher}/>
-                
-                
 
-                </Switch>
+                        </Switch>
+                     
                 </div>
-                </Router>
-
-            );
-        }
-
-
-
+         
+            </Router>
+        );
     }
-
-    export default AdminController;
+}
+export default AdminController;

@@ -1,22 +1,24 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-class About_us extends Component {
+class DeanConfig extends Component {
 
     render() {
-        return (
+        return(
+            <div>
 
+                <br/>
 
-         <div>
-
+                <main class="page-content"> 
+        
             <div className="container-fluid">
-                <div className="col-md-12 mt-3 text center" >
+                <div className="col-md-12 text center" >
                     <div className="card">
-                        <div className="row">
+                   
                             <div className="card-header">
-                                <h4>Ikaw Bahala Dito Renan ABOUT CONFIGURATION
+                                <h4>Dean INFORMATION (FOR JONNY pa ren)
 
-                                    <Link className="btn btn-primary float-end" to="/enroll">Enroll</Link>
+                                  {/**<Link className="btn btn-primary float-end" to="/enroll">Enroll</Link> */}  
                                 </h4>
                             </div>
                             <div className="card-body">
@@ -29,12 +31,12 @@ class About_us extends Component {
                                             <th scope="col">ID</th>
                                             <th scope="col">FullName</th>
                                             <th scope="col">College</th>
-                                            <th scope="col">Courses</th>
-                                            <th scope="col">Section</th>
+                                   
                                             <th scope="col">Contact Number</th>
                                             <th scope="col">Email</th>
+                                            <th scope="col">View</th>
                                             <th scope="col">Edit</th>
-                                            <th scope="col">Drop</th>
+                                            <th scope="col">Reset Password</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -46,13 +48,16 @@ class About_us extends Component {
                     </div>
                 </div>
 
-            </div>
+    
 
 
+                    </main>
             </div >
 
         );
     }
+
+
 }
 
-export default About_us;
+export default DeanConfig;

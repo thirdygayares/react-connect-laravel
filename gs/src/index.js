@@ -9,6 +9,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
+
+
+import './pages/assets/custom/ccs/style.css';
+
+
+
+
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
