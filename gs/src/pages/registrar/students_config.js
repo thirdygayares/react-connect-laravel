@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
-import dp from '../../assets/image/profile_picture/admin/Gayares.jpg';
-import messagesIcon from '../../assets/image/icons/messages.png';
-import notificationIcon from '../../assets/image/icons/notification.png';
+import dp from '../assets/image/profile_picture/admin/Gayares.jpg';
+import messagesIcon from '../assets/image/icons/messages.png';
+import notificationIcon from '../assets/image/icons/notification.png';
 
 class Navbar extends Component {
 
