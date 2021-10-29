@@ -1,3 +1,4 @@
+import '../../App.css';
 import React, {Component} from 'react';
 import NavbarHomePage from './inc/navbar';
 import HomePagefrontend from  './HomePagefrontend'

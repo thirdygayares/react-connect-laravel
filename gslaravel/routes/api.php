@@ -22,7 +22,7 @@ Route::get('/registrar', [RegistrarController::class, 'registrar']);
 Route::post('/addguardian', [GuardianController::class, 'guardianstore']);
 Route::get('/guardian', [GuardianController::class, 'guardian']);
 
-Route::post('/addadmin', [AdminController::class, 'adminstore']);
+Route::post('   ', [AdminController::class, 'adminstore']);
 Route::get('/admin', [AdminController::class, 'admin']);
 
 

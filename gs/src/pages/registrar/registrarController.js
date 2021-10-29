@@ -10,7 +10,7 @@ const RegController = () =>{
         <Router>
         <div>
           <Switch>
-            <Route exact path="/"> 
+            <Route exact path="/registrar"> 
               <StudentsConfig/>
             </Route>
 
