@@ -35,7 +35,7 @@ class ViewTeacher extends Component {
                     return (
                         <tr key={item.id}>
                             <td >{item.id}</td>
-                            <td >{item.lastname}</td>
+                            <td >{item.lastname} {item.firstname}</td>
                             <td >{item.college}</td>                   
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>

@@ -34,7 +34,7 @@ class RegistrarConfig extends Component {
                     return (
                         <tr key={item.id}>
                             <td >{item.id}</td>
-                            <td >{item.lastname}</td>                 
+                            <td >{item.lastname} {item.firstname}</td>                 
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
                             <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> View </Link></td>

@@ -34,8 +34,8 @@ class GuardinConfig extends Component {
             this.state.guardian.map((item) => {
                 return (
                     <tr key={item.id}>
-                        <td >{item.id}</td>
-                        <td >{item.lastname} </td>     
+                        <td >{item.id} </td>
+                        <td >{item.lastname} {item.firstname} </td>     
                         <td >{item.email}</td>                               
                         <td >{item.mobilenumber}</td>
                         <td >{item.guardedby}</td>
