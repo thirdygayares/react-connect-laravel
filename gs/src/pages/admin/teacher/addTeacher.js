@@ -1,86 +1,129 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+
+import {Link} from 'react-router-dom';
+import axios from 'axios';
+
 
 class AddTeacher extends Component {
 
-    render() {
-        return(
-            <div>
+        state = {
+            lastname: '', 
+            firstname: '', 
+            gender: '',  
+            college: '',                  
+            mobilenumber: '', 
+            email: '',           
+        }
 
-                <br/>
+        handleInput = (e) => {
+            this.setState({
+                [e.target.name]: e.target.value
+            });
+        }
 
-                <nav className="navbar navbar-light bg-light">
-                <div className="container-fluid">
-                <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <Link className="navbar-brand">Filter</Link>
-            {/**First Filter */}
-                <div className="btn-group" role="group">
-                <button id="btnGroupDrop1" type ="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                College
-                </button>
-                <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><Link className="dropdown-item" href="#">list of College</Link></li>
-                <li><Link className="dropdown-item" href="#">list of College</Link></li>
-                </ul>
-                </div>
+        addTeachers = async (e) => {
+            e.preventDefault(); 
+                     
+            const res = await axios.post('/api/addteacher', this.state);  
 
+            if(res.data.status === 200){
+                console.log(res.data.message);
 
-            </div >
+                this.setState ({
+                    lastname: '', 
+                    firstname: '',
+                    gender: '',   
+                    college: '',                  
+                    mobilenumber: '', 
+                    email: '', 
+                });
 
-            <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search Students" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
-                    </div >
-                </nav >
+            }
+        }
 
-
-
-            <div className="container-fluid">
-                <div className="col-md-12 mt-3 text center" >
+    render(){
+    return(
+        <div>
+   
+        <main class="page-content">      
+        <div className="container-fluid">
+        <div className="row justify-content-center">
+            <div className="col-ms-6 mt-4">
                     <div className="card">
-                        <div className="row">
-                            <div className="card-header">
-                                <h4>Teachers INFORMATION (FOR JONNY pa ren)
-
-                                  <Link className="btn btn-primary float-end" to="/enroll">Add Teacher</Link> 
-                                </h4>
-                            </div>
-                            <div className="card-body">
-
-
-                                <table className="table table-bordered table-striped">
-
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">ID</th>
-                                            <th scope="col">FullName</th>
-                                            <th scope="col">College</th>
-                                   
-                                            <th scope="col">Contact Number</th>
-                                            <th scope="col">Email</th>
-                                            <th scope="col">View</th>
-                                            <th scope="col">Edit</th>
-                                            <th scope="col">Reset Password</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div className="card-header">
+                            <h4>Add Teacher
+                                <Link to="/teacher_config" className="btn btn-danger float-end">BACK</Link>
+                            </h4>
                         </div>
+
+                        <div className="card-body">
+                            <form onSubmit={this.addTeachers} >
+                           
+                         {/* 
+                                <div className="form-group mb-3">
+                                    <label > Image (File Upload)</label>
+                                    <input type="file" name="image"className="form-control" required/>
+                                </div>
+
+                                */}
+
+                                
+
+                                <div className="form-group mb-3">
+                                    <label >Last Name</label>
+                                    <input type="text" name="lastname" onChange={this.handleInput}   value={this.state.lastname}  className="form-control" />
+                                </div>
+
+                                <div className="form-group mb-3">
+                                    <label >First Name</label>
+                                    <input type="text" name="firstname" onChange={this.handleInput}  value={this.state.firstname}  className="form-control" />
+                                </div>
+                                          
+
+                                <div className="form-group mb-3">
+                                    <label >Gender</label>
+                                    <input type="text" name="gender" onChange={this.handleInput}  value={this.state.gender}  className="form-control" />
+                                </div>
+                                        
+
+                                                                         
+                                <div className="form-group mb-3">
+                                    <label >College Department</label>
+                                    <input type="text" name="college" onChange={this.handleInput} value={this.state.college} className="form-control" />
+                                </div>
+
+                                 
+                                <div className="form-group mb-3">
+                                    <label >Mobile Number</label>
+                                    <input type="text" name="mobilenumber" onChange={this.handleInput}  value={this.state.mobilenumber}  className="form-control" />
+                                </div>
+
+                                <div className="form-group mb-3">
+                                    <label >Email</label>
+                                    <input type="email" name="email" onChange={this.handleInput}  value={this.state.email}  className="form-control" />
+                                </div>
+
+                                                                      
+                                <div className="form-group mb-3">
+                                 <button type="submit" className="btn btn-primary">Submit</button>
+
+                                </div>                                                
+                            </form>
+                        </div>
+
+
                     </div>
-                </div>
-
             </div>
+        </div>
+    </div>
+    
+    </main>
+        </div>
 
-            </div >
 
-        );
-    }
-
-
+    );
 }
+}
+
 
 export default AddTeacher;

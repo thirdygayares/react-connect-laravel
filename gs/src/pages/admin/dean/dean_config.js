@@ -9,11 +9,12 @@ class DeanConfig extends Component {
 
                 <br/>
 
-          
+                <main class="page-content"> 
+        
             <div className="container-fluid">
-                <div className="col-md-12 mt-3 text center" >
+                <div className="col-md-12 text center" >
                     <div className="card">
-                        <div className="row">
+                   
                             <div className="card-header">
                                 <h4>Dean INFORMATION (FOR JONNY pa ren)
 
@@ -47,8 +48,10 @@ class DeanConfig extends Component {
                     </div>
                 </div>
 
-            </div>
+    
 
+
+                    </main>
             </div >
 
         );
