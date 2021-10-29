@@ -19,6 +19,7 @@ Route::post('/addregistrar', [RegistrarController::class, 'registrarstore']);
 Route::get('/registrar', [RegistrarController::class, 'registrar']);
 
 Route::post('/addguardian', [GuardianController::class, 'guardianstore']);
+Route::get('/guardian', [GuardianController::class, 'guardian']);
 
 
 

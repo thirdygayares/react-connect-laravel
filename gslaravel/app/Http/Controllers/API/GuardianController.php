@@ -26,4 +26,16 @@ class GuardianController extends Controller
         ]);     
     }
 
+    public function guardian(){
+        $guardian = Guardian::all();
+        return response()->json([
+            'status'=>200,
+            'guardian'=> $guardian,
+        ]);
+        
+        
+        }
+
+
+
 }
