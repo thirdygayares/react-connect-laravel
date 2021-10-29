@@ -23,7 +23,7 @@ class GuardinConfig extends Component {
 </form>
 </nav >
             <h4>GUARDIAN INFORMATION
-                <Link className="btn btn-primary float-end" to="/enroll">Add Guardian</Link>
+                <Link className="btn btn-primary float-end" to="/addguardian">Add Guardian</Link>
             </h4>
         </div>
         <div className="card-body">
@@ -34,14 +34,14 @@ class GuardinConfig extends Component {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">FullName</th>
-                        <th scope="col">College</th>
-                        <th scope="col">Courses</th>
-                        <th scope="col">Section</th>
+                        <th scope="col">FullName</th> 
+                        <th scope="col">Email</th>          
                         <th scope="col">Contact Number</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Guarded name</th>   
+                        <th scope="col">View</th>
                         <th scope="col">Edit</th>
-                        <th scope="col">Drop</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Reset Password</th> 
                     </tr>
                 </thead>
                 <tbody>
