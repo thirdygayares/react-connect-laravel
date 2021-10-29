@@ -3,7 +3,7 @@ import NavbarHomePage from './inc/navbar';
 import HomePagefrontend from  './HomePagefrontend'
 import loginhomepages from './inc/loginhomepages';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import '../../App.css';
 
 class HomePageController extends Component{
     render(){

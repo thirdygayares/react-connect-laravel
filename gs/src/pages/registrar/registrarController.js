@@ -13,9 +13,7 @@ const RegController = () =>{
             <Route exact path="/students_add"> 
               <StudentsConfig/>
             </Route>
-
-      
-
+            
             <Route path="/enroll">
               <AddStudents/>
             </Route>

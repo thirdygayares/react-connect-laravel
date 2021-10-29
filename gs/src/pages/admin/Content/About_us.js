@@ -5,8 +5,7 @@ class About_us extends Component {
 
     render() {
         return (
-
-
+            
          <div>
               <main class="page-content"> 
         

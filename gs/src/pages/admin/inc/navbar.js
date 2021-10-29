@@ -15,21 +15,13 @@ import editIcon from '../../assets/image/icons/sidebaredit.png';
 import addIcon from '../../assets/image/icons/add.png';
 
 
-
-
-
-
-
-
-
-
 class Navbar extends Component {
 
     render() {
         return (
 
             <div>
-
+                
                 <div className="wrapper">
                     <header className="top-header">
                         <nav className="navbar  navbar-expand gap-3 ">
@@ -81,7 +73,6 @@ class Navbar extends Component {
                                     </li>
 
                                     {/**end Messages*/}
-
 
 
                                     {/**Starts Notification*/}
@@ -188,10 +179,6 @@ class Navbar extends Component {
                 </div >
 
 
-
-
-
-
                 {/**Start of Navbar*/}
 
                 <aside className="sidebar-wrapper" data-simplebar="true">
@@ -225,11 +212,7 @@ class Navbar extends Component {
 
 
                             <ul>
-
                                 <li> <Link to="/homepage_Controller"><img src={editIcon} width="20" height="20" class ="me-2"   />Edit Homepage</Link>
-
-                                <li> <Link to="/admin/homepage_Controller"><i className="bi bi-circle"></i>Edit Homepage</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -240,11 +223,8 @@ class Navbar extends Component {
                         <li>
 
 
-
+                            <ul>
                                 <li> <Link to="/About_usCofig"><img src={editIcon} width="20" height="20" class ="me-2"   />Edit About us</Link>
-
-                                <li> <Link to="/admin/About_usCofig"><i className="bi bi-circle"></i>Edit About us</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -258,11 +238,8 @@ class Navbar extends Component {
                         <li>
 
                             <ul>
-
                                 <li> <Link to="/students_config"><img src={studentIcon} width="20" height="20" class ="me-2"   /> View Students</Link>
-
-                                <li> <Link to="/admin/students_config"><i className="bi bi-circle"></i>View Students</Link>
-                  </li>
+                                </li>
 
                             </ul>
                         </li>
@@ -274,11 +251,7 @@ class Navbar extends Component {
                         <li>
 
                             <ul>
-
                                 <li> <Link to="/teacher_config"><img src={teacherIcon} width="20" height="20" class ="me-2"   /> View Teacher</Link>
-
-                                <li> <Link to="/admin/teacherview"><i className="bi bi-circle"></i>View Teacher</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -288,11 +261,7 @@ class Navbar extends Component {
                         {/** Registrar */}
                         <li>
                             <ul>
-
                                 <li> <Link to="registar_config"><img src={registrarIcon} width="20" height="20" class ="me-2"   />View Registrar</Link>
-
-                                <li> <Link to="/admin/registar_config"><i className="bi bi-circle"></i>View Registrar</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -303,11 +272,7 @@ class Navbar extends Component {
                         {/** Dean */}
                         <li>
                             <ul>
-
                                 <li> <Link to="/dean_config"><img src={deanIcon} width="20" height="20" class ="me-2"   />View Dean</Link>
-
-                                <li> <Link to="/admin/dean_config"><i className="bi bi-circle"></i>View Dean</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -319,11 +284,7 @@ class Navbar extends Component {
 
                         <li>
                             <ul>
-
                                 <li> <Link to="/guardian_config"><img src={guardianIcon} width="20" height="20" class ="me-2"   />View Guardian</Link>
-
-                                <li> <Link to="/admin/guardian_config"><i className="bi bi-circle"></i>View Guardian</Link>
-
                                 </li>
                             </ul>
                         </li>
@@ -333,11 +294,7 @@ class Navbar extends Component {
                         {/** Admin acoount */}
                         <li>
                             <ul>
-
                                 <li> <Link to="/admin_config"><img src={adminIcon} width="20" height="20" class ="me-2"   />Admin Account</Link>
-
-                                <li> <Link to="/admin/admin_config"><i className="bi bi-circle"></i>Admin Account</Link>
-
                                 </li>
                             </ul>
                         </li>
