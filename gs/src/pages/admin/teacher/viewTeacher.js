@@ -39,9 +39,9 @@ class ViewTeacher extends Component {
                             <td >{item.college}</td>                   
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
-                            <td > <Link className="btn btn-success" to={'edit-teacher/${item.id}'}> Edit </Link></td>
                             <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> View </Link></td>
-                            <td > <Link className="btn btn-success" to={'delete-teacher/${item.id}'}> Delete </Link></td>
+                            <td > <Link className="btn btn-primary" to={'edit-teacher/${item.id}'}> Edit </Link></td>
+                            <td > <Link className="btn btn-danger" to={'delete-teacher/${item.id}'}> Delete </Link></td>
                             <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}> Reset Password </Link></td>
                         </tr>
                     );
@@ -108,6 +108,7 @@ class ViewTeacher extends Component {
                                             <th scope="col">Email</th>
                                             <th scope="col">View</th>
                                             <th scope="col">Edit</th>
+                                            <th scope="col">Delete</th>
                                             <th scope="col">Reset Password</th>
                                         </tr>
                                     </thead>

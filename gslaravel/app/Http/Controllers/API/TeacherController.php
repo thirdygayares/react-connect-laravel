@@ -25,7 +25,7 @@ class TeacherController extends Controller
     }
 
     public function teacher(){
-        $teacher =  Teacher::all();
+        $teacher = Teacher::all();
         return response()->json([
             'status'=>200,
             'teacher'=> $teacher,
