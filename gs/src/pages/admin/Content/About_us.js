@@ -8,7 +8,8 @@ class About_us extends Component {
 
 
          <div>
-
+              <main class="page-content"> 
+        
             <div className="container-fluid">
                 <div className="col-md-12 mt-3 text center" >
                     <div className="card">
@@ -47,7 +48,7 @@ class About_us extends Component {
                 </div>
 
             </div>
-
+            </main>
 
             </div >
 

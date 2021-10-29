@@ -47,7 +47,7 @@ class ViewTeacher extends Component {
                     return (
                         <tr key={item.id}>
                             <td >{item.id}</td>
-                            <td >{item.lastname}</td>
+                            <td >{item.lastname} {item.firstname}</td>
                             <td >{item.college}</td>                   
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
@@ -102,8 +102,10 @@ class ViewTeacher extends Component {
                             <div className="card-header">
                                 <h4>Teachers INFORMATION (FOR JONNY pa ren)
 
+
                                   <Link className="btn btn-primary float-end" to="/add_teacher"><img src={addIcon} width="15" height="15" /></Link> 
-                                </h4>
+                         <Link className="btn btn-primary float-end" to="/add_teacher">Add Teacher</Link> 
+              </h4>
                             </div>
                             <div className="card-body">
 
@@ -114,8 +116,7 @@ class ViewTeacher extends Component {
                                         <tr>
                                             <th scope="col">ID</th>
                                             <th scope="col">FullName</th>
-                                            <th scope="col">College</th>
-                                   
+                                            <th scope="col">College</th>                                 
                                             <th scope="col">Contact Number</th>
                                             <th scope="col">Email</th>
                                             <th scope="col">View</th>

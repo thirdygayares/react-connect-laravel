@@ -45,7 +45,7 @@ class Students extends Component {
                     return (
                         <tr key={item.id}>
                             <td >{item.id}</td>
-                            <td >{item.lastname}</td>
+                            <td >{item.lastname} {item.firstname}</td>
                             <td >{item.college}</td>
                             <td >{item.course}</td>
                             <td >{item.section}</td>

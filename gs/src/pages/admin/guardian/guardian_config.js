@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+
 import searchIcon from '../../assets/image/icons/search.png';
 import addIcon from '../../assets/image/icons/add.png';
 import viewIcon from '../../assets/image/icons/view.png';
@@ -8,19 +9,30 @@ import deleteIcon from '../../assets/image/icons/delete.png';
 
 
 
-
 class GuardinConfig extends Component {
 //basta nag add ako sa guardian di ko alam yung mga opening bracket e
+
+
     state = {
         guardian: [],
         loading: true,
     }
+
     async componentDidMount() {
         const res = await axios.get('http://127.0.0.1:8000/api/students');
         //console.log(res);
         if (res.data.status === 200) {
             this.setState({
                 student: res.data.guardian,
+
+
+    async componentDidMount() {
+        const res = await axios.get('/api/guardian');
+        console.log(res);
+        if (res.data.status === 200) {
+            this.setState({
+                guardian: res.data.guardian,
+
                 loading: false,
             });
         }
@@ -32,11 +44,20 @@ class GuardinConfig extends Component {
     if (this.state.loading) {
         
         Guardian_data = <tr>
+
+  render() {
+
+    var guardianData = " ";
+
+    if (this.state.loading) {
+        guardianData = <tr>
+
             <td colSpan="7">
                 <h2>Loading</h2>
             </td>
         </tr>
     } else {
+
         Guardian_data =
             this.state.guardian.map((item) => {
                 return (
@@ -54,6 +75,23 @@ class GuardinConfig extends Component {
                 );
             });
 
+
+        guardianData =
+            this.state.guardian.map((item) => {
+                return (
+                    <tr key={item.id}>
+                        <td >{item.id} </td>
+                        <td >{item.lastname} {item.firstname} </td>     
+                        <td >{item.email}</td>                               
+                        <td >{item.mobilenumber}</td>
+                        <td >{item.guardedby}</td>
+                        <td > <Link className="btn btn-success" to={'view-guardian/${item.id}'}> View </Link></td>
+                        <td > <Link className="btn btn-primary" to={'edit-guardian/${item.id}'}> Edit </Link></td>
+                        <td > <Link className="btn btn-danger" to={'delete-guardian/${item.id}'}> Delete </Link></td>
+                        <td > <Link className="btn btn-danger" to={'reset-guardian/${item.id}'}> Reset Password </Link></td>
+                    </tr>
+                );
+            });
     }
 
     return (
@@ -98,8 +136,11 @@ class GuardinConfig extends Component {
                 </thead>
                 <tbody>
 
+
               
             
+                        {guardianData}
+
                 </tbody>
             </table>
         </div>
@@ -109,12 +150,6 @@ class GuardinConfig extends Component {
 </div>
 
 </main>
-
-
-
-
-
-
       </div>
 
     );
