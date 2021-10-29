@@ -1,6 +1,18 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import viewIcon from '../../assets/image/icons/view.png';
+import editIcon from '../../assets/image/icons/edit.png';
+import deleteIcon from '../../assets/image/icons/delete.png';
+import resetIcon from '../../assets/image/icons/reset.png';
+import addIcon from '../../assets/image/icons/add.png';
+import searchIcon from '../../assets/image/icons/search.png';
+
+
+
+
+
+
 
 class ViewTeacher extends Component {
     state = {
@@ -39,10 +51,10 @@ class ViewTeacher extends Component {
                             <td >{item.college}</td>                   
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
-                            <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> View </Link></td>
-                            <td > <Link className="btn btn-primary" to={'edit-teacher/${item.id}'}> Edit </Link></td>
-                            <td > <Link className="btn btn-danger" to={'delete-teacher/${item.id}'}> Delete </Link></td>
-                            <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}> Reset Password </Link></td>
+                            <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> <img src={viewIcon} width="25" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-primary" to={'edit-teacher/${item.id}'}> <img src={editIcon} width="15" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-danger" to={'delete-teacher/${item.id}'}> <img src={deleteIcon} width="15" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}> <img src={resetIcon} width="15" height="15" /> </Link></td>
                         </tr>
                     );
                 });
@@ -76,7 +88,7 @@ class ViewTeacher extends Component {
 
             <form className="d-flex">
                 <input className="form-control me-2" type="search" placeholder="Search Teacher" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
+                <button className="btn btn-outline-success" type="submit"><img src={searchIcon} width="30" height="30" /></button>
             </form>
                     </div >
                 </nav >
@@ -89,8 +101,11 @@ class ViewTeacher extends Component {
                        
                             <div className="card-header">
                                 <h4>Teachers INFORMATION (FOR JONNY pa ren)
-                                  <Link className="btn btn-primary float-end" to="/add_teacher">Add Teacher</Link> 
-                                </h4>
+
+
+                                  <Link className="btn btn-primary float-end" to="/add_teacher"><img src={addIcon} width="15" height="15" /></Link> 
+                         <Link className="btn btn-primary float-end" to="/add_teacher">Add Teacher</Link> 
+              </h4>
                             </div>
                             <div className="card-body">
 
