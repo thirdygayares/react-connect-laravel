@@ -11,10 +11,8 @@ import AddTeacher from "./teacher/addTeacher";
 import DeanConfig from "./dean/dean_config";
 import RegistrarConfig from "./registrar/registrar_config";
 import AddRegistrar from "./registrar/add_registrar";
-
 import GuardinConfig from "./guardian/guardian_config";
 import AddGuardian from "./guardian/addguardian";
-
 import AdminAccount from "./admin_account/admin_account";
 
 
@@ -38,7 +36,6 @@ class AdminController extends Component{
                             <Route path ="/add_registrar" component = {AddRegistrar}/>
                             <Route path ="/guardian_config" component = {GuardinConfig}/> 
                             <Route path ="/addguardian" component = {AddGuardian}/> 
-
                             <Route path ="/admin_config" component = {AdminAccount}/>       
                             <Route path ="/add_teacher" component = {AddTeacher}/>                           
 
