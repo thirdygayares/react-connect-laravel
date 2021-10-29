@@ -23,7 +23,7 @@ class AddRegistrar extends Component {
         AddRegistrar = async (e) => {
             e.preventDefault(); 
                      
-            const res = await axios.post('/api/addregistrar', this.state);  
+            const res = await axios.post(`/api/addregistrar`, this.state);  
 
             if(res.data.status === 200){
                 console.log(res.data.message);
