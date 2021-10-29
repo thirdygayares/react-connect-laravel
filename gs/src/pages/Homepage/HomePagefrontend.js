@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Slider from './inc/slider';
 import SampleBottom from './images/SampleBottom.jpg';

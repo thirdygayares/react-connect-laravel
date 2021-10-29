@@ -6,7 +6,9 @@ class NavbarHomePage extends Component {
     render() {
         return (
             <div >
-              
+
+            
+
                 <div className="nav_homepage">
                     <nav className="navbar navbar-expand-lg navbar-dark">
                         <div className="container">

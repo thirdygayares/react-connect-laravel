@@ -27,9 +27,7 @@ function App() {
   return (
     <div>
 
-      <Router>
-
-     
+      <Router>    
         <Switch>
           
          {/** start of homepage */} 
