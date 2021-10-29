@@ -45,7 +45,7 @@ class AddAdmin extends Component {
                                 <div className="card">
                                     <div className="card-header">
                                         <h4>Add Admin Account
-                                            <Link to="/admin_config" className="btn btn-danger float-end">BACK</Link>
+                                            <Link to="/admin/admin_config" className="btn btn-danger float-end">BACK</Link>
                                         </h4>
                                     </div>
                                     <div className="card-body">

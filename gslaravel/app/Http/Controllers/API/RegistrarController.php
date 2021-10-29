@@ -21,7 +21,7 @@ class RegistrarController extends Controller
         return response()->json([
             'status'=>200,
             'message'=>'Registrar Added Succesfully',
-        ]);     
+        ]);
     }
 
 
@@ -31,10 +31,30 @@ class RegistrarController extends Controller
         'status'=>200,
         'registrar'=> $registrar,
     ]);
-    
+
+
     }
+    public function editRegistrar($id){
+        $registrar = Registrar::find($id);
+        return response()->json([
+            'status'=> 200,
+            'registrar'=> $registrar,
+        ]);
+        }
+        
+        public function updateRegistrar(Request $request,$id){
+            $registrar = Registrar::find($id);
+            $registrar->lastname = $request->input('lastname');
+            $registrar->firstname = $request->input('firstname');
+            $registrar->gender = $request->input('gender');
+            $registrar->mobilenumber = $request->input('mobilenumber');
+            $registrar->email = $request->input('email');
+            $registrar->update();
 
-
-
+            return response()->json([
+                'status'=>200,
+                'message'=>'Registrar Updated Succesfully',
+            ]);
+        }
 
 }

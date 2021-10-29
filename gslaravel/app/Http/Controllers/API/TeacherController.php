@@ -33,4 +33,26 @@ class TeacherController extends Controller
 
 
     }
+    public function editTeacher($id){
+        $teacher = Teacher::find($id);
+        return response()->json([
+            'status'=> 200,
+            'teacher'=> $teacher,
+        ]);
+    }
+    public function updateTeacher(Request $request,$id){
+        $teacher = Teacher::find($id);
+        $teacher->lastname = $request->input('lastname');
+        $teacher->firstname = $request->input('firstname');
+        $teacher->college = $request->input('college');
+        $teacher->gender = $request->input('gender');
+        $teacher->mobilenumber = $request->input('mobilenumber');
+        $teacher->email = $request->input('email');
+        $teacher->update();
+
+        return response()->json([
+            'status'=>200,
+            'message'=>'Teacher Updated Succesfully',
+        ]);
+    }
 }

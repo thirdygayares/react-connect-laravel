@@ -8,8 +8,8 @@ import axios from 'axios';
 // admin page
 // homepage
 import HomePageController from "./pages/Homepage/HomePageController";
-import  AdminController from "./pages/admin/AdminController";
-
+import AdminController from "./pages/admin/AdminController";
+import RegController from "./pages/registrar/registrarController"
 // end of admin page
 
 
@@ -33,14 +33,21 @@ function App() {
         <Switch>
           
          {/** start of homepage */} 
-
+  {/* 
        <Route>       
        <HomePageController/>
-       </Route>       
+       </Route>        */}
 
        <Route>       
        <AdminController/>
        </Route> 
+
+       {/* <Route>       
+       <RegController/>
+       </Route>  */}
+
+
+       
 
           {/** end of homepage */} 
 

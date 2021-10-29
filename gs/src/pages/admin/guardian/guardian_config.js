@@ -71,7 +71,7 @@ class GuardinConfig extends Component {
 </form>
 </nav >
             <h4>GUARDIAN INFORMATION
-                <Link className="btn btn-primary float-end" to="/addguardian">Add Guardian</Link>
+                <Link className="btn btn-primary float-end" to="/admin/addguardian">Add Guardian</Link>
             </h4>
         </div>
         <div className="card-body">

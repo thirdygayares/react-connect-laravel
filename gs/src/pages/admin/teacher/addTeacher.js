@@ -52,7 +52,7 @@ class AddTeacher extends Component {
                     <div className="card">
                         <div className="card-header">
                             <h4>Add Teacher
-                                <Link to="/teacher_config" className="btn btn-danger float-end">BACK</Link>
+                                <Link to="/admin/teacherview" className="btn btn-danger float-end">BACK</Link>
                             </h4>
                         </div>
 

@@ -8,7 +8,6 @@ import addIcon from '../../assets/image/icons/add.png';
 import axios from 'axios';
 
 
-
 class AdminAccount extends Component {
     state = {
         admin: [],
@@ -74,10 +73,9 @@ class AdminAccount extends Component {
                                     </nav >
                                     <h4>Admin INFORMATION
 
-                                        <Link className="btn btn-primary float-end" to="/enroll"><img src={addIcon} width="15" height="15" /></Link>
+                                        <Link className="btn btn-primary float-end" to="/admin/create_admin"><img src={addIcon} width="15" height="15" /></Link>
 
-                                        <Link className="btn btn-primary float-end" to="/create_admin">Add Admin</Link>
-
+                                      
                                     </h4>
                                 </div>
                                 <div className="card-body">

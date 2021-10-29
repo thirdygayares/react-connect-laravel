@@ -50,7 +50,7 @@ class AddRegistrar extends Component {
                     <div className="card">
                         <div className="card-header">
                             <h4>Add Registrar
-                                <Link to="/registar_config" className="btn btn-danger float-end">BACK</Link>
+                                <Link to="/admin/registar_config" className="btn btn-danger float-end">BACK</Link>
                             </h4>
                         </div>
 

@@ -52,9 +52,9 @@ class ViewTeacher extends Component {
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
                             <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}> <img src={viewIcon} width="25" height="15" /> </Link></td>
-                            <td > <Link className="btn btn-primary" to={'edit-teacher/${item.id}'}> <img src={editIcon} width="15" height="15" /> </Link></td>
-                            <td > <Link className="btn btn-danger" to={'delete-teacher/${item.id}'}> <img src={deleteIcon} width="15" height="15" /> </Link></td>
-                            <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}> <img src={resetIcon} width="15" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-primary" to={`/edit_teacher/${item.id}`}> <img src={editIcon} width="15" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-danger" to={`delete-teacher/${item.id}`}> <img src={deleteIcon} width="15" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-danger" to={`reset-teacher/${item.id}`}> <img src={resetIcon} width="15" height="15" /> </Link></td>
                         </tr>
                     );
                 });
@@ -103,8 +103,8 @@ class ViewTeacher extends Component {
                                 <h4>Teachers INFORMATION (FOR JONNY pa ren)
 
 
-                                  <Link className="btn btn-primary float-end" to="/add_teacher"><img src={addIcon} width="15" height="15" /></Link> 
-                         <Link className="btn btn-primary float-end" to="/add_teacher">Add Teacher</Link> 
+                                  <Link className="btn btn-primary float-end" to="/admin/add_teacher"><img src={addIcon} width="15" height="15" /></Link> 
+                     
               </h4>
                             </div>
                             <div className="card-body">

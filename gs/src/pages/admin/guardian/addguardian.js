@@ -50,7 +50,7 @@ class AddGuardian extends Component {
                                 <div className="card">
                                     <div className="card-header">
                                         <h4>Add Guardian
-                                            <Link to="/guardian_config" className="btn btn-danger float-end">BACK</Link>
+                                            <Link to="/admin/guardian_config" className="btn btn-danger float-end">BACK</Link>
                                         </h4>
                                     </div>
                                     <div className="card-body">

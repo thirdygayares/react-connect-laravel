@@ -19,7 +19,9 @@ import Homepage_Controller from "./Content/Homepage";
 import About_us from "./Content/About_us";
 
 import ViewTeacher from "./teacher/viewTeacher";
+import EditTeacher from "./teacher/editTeacher";
 
+import edit_Registrar from "./registrar/edit_Registrar";
 // Navbar
 import Navbar from "./inc/navbar.js";
 
@@ -43,6 +45,7 @@ class AdminController extends Component {
                     <Route path="/admin/dean_config" component={DeanConfig} />
 
                     <Route path="/admin/registar_config" component={RegistrarConfig} />
+
                     <Route path="/admin/add_registrar" component={AddRegistrar} />
 
                     <Route path="/admin/guardian_config" component={GuardinConfig} />
@@ -50,7 +53,8 @@ class AdminController extends Component {
 
                     <Route path="/admin/admin_config" component={AdminAccount} />
                     <Route path="/admin/create_admin" component={AddAdmin} />
-
+                    <Route path ="/edit_teacher/:id" component = {EditTeacher}/>
+                    <Route path ="/edit_registrar/:id" component = {edit_Registrar}/>
                     {/** ending of admin */}
                 </Switch>
             </Router>

@@ -48,10 +48,10 @@ class RegistrarConfig extends Component {
                             <td >{item.lastname} {item.firstname}</td>                 
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
-                            <td > <Link className="btn btn-success" to={'view-teacher/${item.id}'}><img src={viewIcon} width="25" height="15" /> </Link></td>
-                            <td > <Link className="btn btn-primary" to={'edit-teacher/${item.id}'}><img src={editIcon} width="15" height="15" />  </Link></td>
-                            <td > <Link className="btn btn-danger" to={'delete-teacher/${item.id}'}><img src={deleteIcon} width="15" height="15" />  </Link></td>
-                            <td > <Link className="btn btn-danger" to={'reset-teacher/${item.id}'}><img src={resetIcon} width="15" height="15" />  </Link></td>
+                            <td > <Link className="btn btn-success" to={'view-registrar/${item.id}'}><img src={viewIcon} width="25" height="15" /> </Link></td>
+                            <td > <Link className="btn btn-primary" to={`/edit_registrar/${item.id}`}><img src={editIcon} width="15" height="15" />  </Link></td>
+                            <td > <Link className="btn btn-danger" to={`delete-registrar/${item.id}`}><img src={deleteIcon} width="15" height="15" />  </Link></td>
+                            <td > <Link className="btn btn-danger" to={`reset-registrar/${item.id}`}><img src={resetIcon} width="15" height="15" />  </Link></td>
                         </tr>
                     );
                 });
@@ -76,7 +76,7 @@ class RegistrarConfig extends Component {
                                 <div className="card-header">
                                     <h4>Registrar information
 
-                                        <Link className="btn btn-primary float-end" to="/add_registrar"><img src={addIcon} width="15" height="15" /></Link>
+                                        <Link className="btn btn-primary float-end" to="/admin/add_registrar"><img src={addIcon} width="15" height="15" /></Link>
                                     </h4>
                                 </div>
                                 <div className="card-body">
