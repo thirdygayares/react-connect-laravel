@@ -1,10 +1,53 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 class GuardinConfig extends Component {
+    state = {
+        guardian: [],
+        loading: true,
+    }
 
+    async componentDidMount() {
+        const res = await axios.get('/api/guardian');
+        console.log(res);
+        if (res.data.status === 200) {
+            this.setState({
+                guardian: res.data.guardian,
+                loading: false,
+            });
+        }
+    }
   render() {
+
+    var guardianData = " ";
+
+    if (this.state.loading) {
+        guardianData = <tr>
+            <td colSpan="7">
+                <h2>Loading</h2>
+            </td>
+        </tr>
+    } else {
+        guardianData =
+            this.state.guardian.map((item) => {
+                return (
+                    <tr key={item.id}>
+                        <td >{item.id} </td>
+                        <td >{item.lastname} {item.firstname} </td>     
+                        <td >{item.email}</td>                               
+                        <td >{item.mobilenumber}</td>
+                        <td >{item.guardedby}</td>
+                        <td > <Link className="btn btn-success" to={'view-guardian/${item.id}'}> View </Link></td>
+                        <td > <Link className="btn btn-primary" to={'edit-guardian/${item.id}'}> Edit </Link></td>
+                        <td > <Link className="btn btn-danger" to={'delete-guardian/${item.id}'}> Delete </Link></td>
+                        <td > <Link className="btn btn-danger" to={'reset-guardian/${item.id}'}> Reset Password </Link></td>
+                    </tr>
+                );
+            });
+    }
+
     return (
       <div>
   
@@ -23,7 +66,7 @@ class GuardinConfig extends Component {
 </form>
 </nav >
             <h4>GUARDIAN INFORMATION
-                <Link className="btn btn-primary float-end" to="/enroll">Add Guardian</Link>
+                <Link className="btn btn-primary float-end" to="/addguardian">Add Guardian</Link>
             </h4>
         </div>
         <div className="card-body">
@@ -34,19 +77,18 @@ class GuardinConfig extends Component {
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">FullName</th>
-                        <th scope="col">College</th>
-                        <th scope="col">Courses</th>
-                        <th scope="col">Section</th>
+                        <th scope="col">FullName</th> 
+                        <th scope="col">Email</th>          
                         <th scope="col">Contact Number</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">Guarded name</th>   
+                        <th scope="col">View</th>
                         <th scope="col">Edit</th>
-                        <th scope="col">Drop</th>
+                        <th scope="col">Delete</th>
+                        <th scope="col">Reset Password</th> 
                     </tr>
                 </thead>
                 <tbody>
-
-            
+                        {guardianData}
                 </tbody>
             </table>
         </div>
@@ -56,12 +98,6 @@ class GuardinConfig extends Component {
 </div>
 
 </main>
-
-
-
-
-
-
       </div>
 
     );

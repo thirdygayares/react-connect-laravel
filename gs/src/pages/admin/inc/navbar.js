@@ -207,7 +207,7 @@ class Navbar extends Component {
 
 
                             <ul>
-                                <li> <Link to="/homepage_Controller"><i className="bi bi-circle"></i>Edit Homepage</Link>
+                                <li> <Link to="/admin/homepage_Controller"><i className="bi bi-circle"></i>Edit Homepage</Link>
                                 </li>
                             </ul>
                         </li>
@@ -219,7 +219,7 @@ class Navbar extends Component {
 
 
                             <ul>
-                                <li> <Link to="/About_usCofig"><i className="bi bi-circle"></i>Edit About us</Link>
+                                <li> <Link to="/admin/About_usCofig"><i className="bi bi-circle"></i>Edit About us</Link>
                                 </li>
                             </ul>
                         </li>
@@ -233,7 +233,7 @@ class Navbar extends Component {
                         <li>
 
                             <ul>
-                                <li> <Link to="/students_config"><i className="bi bi-circle"></i>View Students</Link>
+                                <li> <Link to="/admin/students_config"><i className="bi bi-circle"></i>View Students</Link>
                                 </li>
 
                             </ul>
@@ -246,7 +246,7 @@ class Navbar extends Component {
                         <li>
 
                             <ul>
-                                <li> <Link to="/teacher_config"><i className="bi bi-circle"></i>View Teacher</Link>
+                                <li> <Link to="/admin/teacherview"><i className="bi bi-circle"></i>View Teacher</Link>
                                 </li>
                             </ul>
                         </li>
@@ -256,7 +256,7 @@ class Navbar extends Component {
                         {/** Registrar */}
                         <li>
                             <ul>
-                                <li> <Link to="registar_config"><i className="bi bi-circle"></i>View Registrar</Link>
+                                <li> <Link to="/admin/registar_config"><i className="bi bi-circle"></i>View Registrar</Link>
                                 </li>
                             </ul>
                         </li>
@@ -267,7 +267,7 @@ class Navbar extends Component {
                         {/** Dean */}
                         <li>
                             <ul>
-                                <li> <Link to="/dean_config"><i className="bi bi-circle"></i>View Dean</Link>
+                                <li> <Link to="/admin/dean_config"><i className="bi bi-circle"></i>View Dean</Link>
                                 </li>
                             </ul>
                         </li>
@@ -279,7 +279,7 @@ class Navbar extends Component {
 
                         <li>
                             <ul>
-                                <li> <Link to="/guardian_config"><i className="bi bi-circle"></i>View Guardian</Link>
+                                <li> <Link to="/admin/guardian_config"><i className="bi bi-circle"></i>View Guardian</Link>
                                 </li>
                             </ul>
                         </li>
@@ -289,7 +289,7 @@ class Navbar extends Component {
                         {/** Admin acoount */}
                         <li>
                             <ul>
-                                <li> <Link to="/admin_config"><i className="bi bi-circle"></i>Admin Account</Link>
+                                <li> <Link to="/admin/admin_config"><i className="bi bi-circle"></i>Admin Account</Link>
                                 </li>
                             </ul>
                         </li>

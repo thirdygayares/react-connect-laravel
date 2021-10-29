@@ -1,11 +1,61 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Students extends Component {
 
+
+    state = {
+        student: [],
+        loading: true,
+    }
+
+
+    async componentDidMount() {
+        const res = await axios.get('http://127.0.0.1:8000/api/students');
+        //console.log(res);
+        if (res.data.status === 200) {
+            this.setState({
+                student: res.data.students,
+                loading: false,
+            });
+        }
+    }
+
+
     render() {
+
+        var Students_data = " ";
+
+        if (this.state.loading) {
+            Students_data = <tr>
+                <td colSpan="7">
+                    <h2>Loading</h2>
+                </td>
+            </tr>
+        } else {
+            Students_data =
+                this.state.student.map((item) => {
+                    return (
+                        <tr key={item.id}>
+                            <td >{item.id}</td>
+                            <td >{item.lastname} {item.firstname}</td>
+                            <td >{item.college}</td>
+                            <td >{item.course}</td>
+                            <td >{item.section}</td>
+                            <td >{item.mobilenumber}</td>
+                            <td >{item.email}</td>
+                            <td > <Link className="btn btn-success" to={'view-students/${item.id}'}> View </Link></td>
+                            <td > <Link className="btn btn-danger" to={'delete-students/${item.id}'}> Reset Password </Link></td>
+                        </tr>
+                    );
+                });
+
+        }
+
         return (
 
+            
 
             <div>
 
@@ -93,7 +143,7 @@ class Students extends Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        {Students_data}
                                     </tbody>
                                 </table>
                             </div>

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,216 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+.nav_homepage{
+  background-color: #2E7AA0;
+}
+
+/* homepage */
+.section{
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+
+.bg-c-light{
+  background-color: #2E7AA0;  
+
+  background-image: url(pages/Homepage/images/bghomepage.jpg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position-x:950px;
+  background-position-y:40px;
+}
+
+
+ 
+
+
+
+.MainHeading{
+  font-family: initial;
+  margin-top: 160px;
+  color: #FFFFFF;
+  font-size: 50px;
+  
+}
+/* Upper body */
+.quotebody{
+  margin-top: 20px;
+  margin-left: 40px;
+  color: #FFFFFF;
+}
+.bghomepages{
+  background-image: linear-gradient();
+}
+.Author{
+  margin-top: 30px;
+  color: #FFFFFF;
+  margin-left: 30px;
+  font-size: 25px;
+  padding-bottom: 150px;
+}
+
+/* bottom body */
+.bottomheading{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.bottomheading{
+  margin-left: -150px;
+  color: rgb(204, 18, 1);
+}
+
+.underline{
+  height: 5px;
+  width: 12rem;
+  background-color:#f76c2f;
+  margin-left: -120px;
+}
+
+/* log in */
+.bgcolor{
+  background-color: #2E7AA0;
+  padding-top: 10%;
+  padding-bottom: 170px;
+
+
+/* background-image: url(pages/Homepage/images/login_bg.jpg); */
+}
+
+body {
+
+  background: #28b8fa;
+  font-family: 'Roboto', sans-serif;
+}
+
+.login-box {
+  margin-top: 75px;
+  height: auto;
+  background: #1A2226;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-key {
+  height: 100px;
+  font-size: 80px;
+  line-height: 100px;
+  background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login-title {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ECF0F5;
+}
+
+.login-form {
+  margin-top: 25px;
+  text-align: left;
+}
+
+input[type=email] {
+  /* background-color: #1A2226; */
+  border: none;
+  border-bottom: 2px solid #0DB8DE;
+  border-top: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  outline: 0;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  color: #ECF0F5;
+}
+
+
+
+input[type=text] {
+  /* background-color: #1A2226; */
+  border: none;
+  border-bottom: 2px solid #0DB8DE;
+  border-top: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  outline: 0;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  color: #ECF0F5;
+}
+
+input[type=password] {
+  /* background-color: #1A2226; */
+  border: none;
+  border-bottom: 2px solid #0DB8DE;
+  border-top: 0px;
+  border-radius: 0px;
+  font-weight: bold;
+  outline: 0;
+  padding-left: 0px;
+  margin-bottom: 20px;
+  color: #ECF0F5;
+}
+
+.form-group {
+  margin-bottom: 40px;
+  outline: 0px;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 2px solid #0DB8DE;
+  outline: 0;
+  background-color: #1A2226;
+  color: #ECF0F5;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0;
+}
+
+label {
+  margin-bottom: 0px;
+}
+
+.form-control-label {
+  font-size: 10px;
+  color: #6C6C6C;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/*Nag delete ako dito asa doc yung cppy*/
+
+.login-btm {
+  float: left;
+}
+
+.login-button {
+  padding-right: 0px;
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.login-text {
+  text-align: left;
+  padding-left: 0px;
+  color: #A2A4A4;
+}
+
+.loginbtm {
+  padding: 20px;
 }
