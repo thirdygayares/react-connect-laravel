@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import viewIcon from '../../assets/image/icons/view.png';
+import resetIcon from '../../assets/image/icons/reset.png';
+import searchIcon from '../../assets/image/icons/search.png';
+
+
+
 
 class Students extends Component {
-
 
     state = {
         student: [],
@@ -28,6 +33,7 @@ class Students extends Component {
         var Students_data = " ";
 
         if (this.state.loading) {
+            
             Students_data = <tr>
                 <td colSpan="7">
                     <h2>Loading</h2>
@@ -45,8 +51,8 @@ class Students extends Component {
                             <td >{item.section}</td>
                             <td >{item.mobilenumber}</td>
                             <td >{item.email}</td>
-                            <td > <Link className="btn btn-success" to={'view-students/${item.id}'}> View </Link></td>
-                            <td > <Link className="btn btn-danger" to={'delete-students/${item.id}'}> Reset Password </Link></td>
+                            <td > <Link className="btn btn-primary" to={'view-students/${item.id}'}><img src={viewIcon} width="25" height="15" />  </Link></td>
+                            <td > <Link className="btn btn-danger" to={'delete-students/${item.id}'}><img src={resetIcon} width="15" height="15" /> </Link></td>
                         </tr>
                     );
                 });
@@ -107,7 +113,7 @@ class Students extends Component {
 
             <form className="d-flex">
                 <input className="form-control me-2" type="search" placeholder="Search Students" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
+                <button className="btn btn-outline-success" type="submit"><img src={searchIcon} width="30" height="30" /></button>
             </form>
                     </div >
                 </nav >

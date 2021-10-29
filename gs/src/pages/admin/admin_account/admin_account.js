@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import addIcon from '../../assets/image/icons/add.png';
+
+
 
 
 class AdminAccount extends Component {
@@ -23,7 +26,7 @@ class AdminAccount extends Component {
                                         </form>
                                     </nav >
                                     <h4>Admin INFORMATION
-                                        <Link className="btn btn-primary float-end" to="/enroll">Add Admin</Link>
+                                        <Link className="btn btn-primary float-end" to="/enroll"><img src={addIcon} width="15" height="15" /></Link>
                                     </h4>
                                 </div>
                                 <div className="card-body">
